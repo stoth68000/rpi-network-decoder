@@ -1,0 +1,13 @@
+[Unit]
+Description=Network Decoder Service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=pi
+Group=pi
+Type=idle
+ExecStart=/home/pi/network-decoder/start-vlc.sh
+
+[Install]
+WantedBy=multi-user.target
